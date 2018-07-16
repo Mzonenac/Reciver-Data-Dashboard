@@ -1,0 +1,56 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header text-center">
+        <h2 style="color:#fff;">Reciver online Data</h2>
+      </div>
+      <div class="pull-right">
+        <h2 style="color:#fff;" id="time"></h2>
+      </div>
+  </div>
+</div>
+
+ <div id="content" class="container-fluid"></div>
+
+
+
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="alert alert-info text-center">
+     INPUTS
+  </div>
+  <div class="row" style="margin-bottom:10px;">
+    {{#each chartsInputs}}
+      <div class="col-sm-6 col-md-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            {{title}}
+          </div>
+          <div class="chart-stage">
+            <canvas id="{{id}}"></canvas>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="alert alert-info text-center">
+   OUTPUTS
+  </div>
+  <div class="row">
+      {{#each chartsOutputs}}
+        <div class="col-sm-6 col-md-4">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              {{title}}
+            </div>
+            <div class="chart-stage">
+              <canvas id="{{id}}"></canvas>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+  </div>
+</script>
+
+<script id="entry-time" type="text/x-handlebars-template">
+ <span>{{time}}</span>
+</script>
