@@ -1,5 +1,12 @@
 # reciver-dashboard
 
+### Instalation
+
+1. Clone repository
+2. Use command $ npm install in cloned directory
+3. Use command $ node app.js
+4. Open in browser link http://localhost:1337/
+
 a [Sails v1](https://sailsjs.com) application
 
 
