@@ -1,8 +1,10 @@
 var url = '/api';
 var source = document.getElementById("entry-template").innerHTML;
 var timer = document.getElementById("entry-time").innerHTML
+var error = document.getElementById("entry-error").innerHTML
 var template = Handlebars.compile(source);
 var timerTemplate = Handlebars.compile(timer);
+var errorTemplate = Handlebars.compile(error);
 var format = 'mm:ss';
 var inputLineGraphGraph = [];
 var outputLineGraph = [];
@@ -18,6 +20,7 @@ function getData (flag) {
       var res = JSON.parse(response);
       if (res.error) {
         console.log("Connection error");
+        $('#content').html(errorTemplate());
         return false;
       }
       else {
