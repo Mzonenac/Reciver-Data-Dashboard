@@ -9,7 +9,7 @@ module.exports = {
             return Res.send(res.body);
         })
         .catch( (err) => {
-            return Res.send(err);
+            return Res.send({error: err});
         })
   }
 
