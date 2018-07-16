@@ -5,6 +5,7 @@ module.exports = {
       const Res = res;
       request
         .get(url)
+        .timeout(5000)
         .then((res) => {
             return Res.send(res.body);
         })
